@@ -1,0 +1,10 @@
+---
+- name: install supervisor
+  apt:
+    name: supervisor
+    state: latest
+- name: Supervisor configuration.
+  template:
+    src: supervisor.conf.template
+    dest: /etc/supervisor/conf.d/supervisord.conf
+  notify: restart supervisor

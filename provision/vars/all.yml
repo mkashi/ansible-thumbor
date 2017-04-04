@@ -1,0 +1,12 @@
+---
+supervisors_services:
+  - name: thumbor
+    command: thumbor
+    process_name: thumbor
+    numprocs: 1
+    user: vagrant
+    autostart: true
+    autorestart: true
+    startretries: 3
+    stopsignal: TERM
+thumbor_file_loader_root_path: '/home/vagrant'

@@ -1,0 +1,11 @@
+{% for service in supervisors_services %}
+[program:{{ service.name }}]
+command={{ service.command }}
+process_name={{ service.process_name }}
+numprocs={{ service.numprocs }}
+user={{ service.user }}
+autostart={{ service.autostart }}
+autorestart={{ service.autorestart }}
+startretries={{ service.startretries }}
+stopsignal={{ service.stopsignal }}
+{% endfor %}

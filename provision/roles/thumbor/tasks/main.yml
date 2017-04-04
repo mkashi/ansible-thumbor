@@ -1,0 +1,37 @@
+---
+- name: Update apt
+  apt:
+    update_cache: yes
+- name: Install thumbor dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - build-essential
+    - checkinstall
+    - gcc
+    - python
+    - python-dev
+    - libpng12-dev
+    - libtiff5-dev
+    - libpng-dev
+    - libjasper-dev
+    - libwebp-dev
+    - libcurl4-openssl-dev
+    - python-pgmagick
+    - libmagick++-dev
+    - graphicsmagick
+    - libopencv-dev
+    - python-pip
+
+- name: Install pip dependencies
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - pycurl
+    - numpy
+    - thumbor
+- name: Add Conf file thumbor
+  template:
+    src: thumbor.conf.template
+    dest: /etc/thumbor.conf

@@ -1,0 +1,12 @@
+# README.
+
+# TODO CONFIG
+
+## Commands:
+
+`vagrant up`
+`vagrant ssh`
+
+
+### ansible commands:
+`ansible-playbook -i path/file/hosts playbook.yml`

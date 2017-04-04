@@ -1,0 +1,17 @@
+---
+thumbor_upload_enabled: False
+thumbor_security_key: MY_SECURE_KEY
+thumbor_allow_unsafe_url: True
+# file loader root path Should be set !
+thumbor_file_loader_root_path: ''
+# 1 month
+thumbor_storage_expiration_seconds: 2592000
+
+# Result storage:
+thumbor_result_storage_expiration_seconds: 0
+thumbor_result_storage_stores_unsafe: True
+## Default None. i.e (None, 'thumbor.result_storages.file_storage')
+thumbor_result_storage: "'thumbor.result_storages.file_storage'"
+
+# set webp if headers accept
+thumbor_auto_webp: False
